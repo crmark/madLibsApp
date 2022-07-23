@@ -10,19 +10,30 @@ let userStory = `In ${userInputs[0]} by ${userInputs[1]}, tradition and communit
 
 let numberOfQuestions = 3;
 
-let q1 = prompt("Q1","");
-let q2 = prompt("Q2","");
-let q3 = prompt("Q3","");
+let q1 = prompt("What is your favourite store?","");
+let q2 = prompt("What is your first name?","");
+let q3 = prompt("Which pet do you have?","");
 
-let questionArray = [q1,q2,q2];
+let questionArray = [q1,q2,q3];
+console.log(questionArray);
+let questionCounter = 0;
 
-for(let i = questions; i>=0; i--){
+for(let i = numberOfQuestions; i >= 1; i--){
     console.log(i);
+    console.log(questionArray[questionCounter] + `(${numberOfQuestions} questions left)`);
+    questionCounter++;
+  //  console.log(questionArray[questionCounter] + `(${numberOfQuestions} questions left)`);
+    numberOfQuestions--;
 }
 
+//console.log(questionCounter);
+
+
 //
+/*
 console.log(userStory);
 
 let favo = prompt("Hoi","k");
 
 console.log(favo);
+*/
