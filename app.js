@@ -2,10 +2,8 @@
 
 let originalStory = "In The Lottery by Shirley Jackson, tradition and community ties lead to deadly consequences when a woman is chosen in the eponymous lottery to be stoned to death.";
 //let originalStory = "In The Lottery by Shirley Jackson, tradition and community ties lead to deadly consequences when a woman is chosen in the eponymous lottery to be stoned to death.";
+
 let userInputs = [];
-
-let userStory = `In ${userInputs[0]} by ${userInputs[1]}, tradition and community ties lead to deadly consequences when a ${userInputs[2]} is chosen in the eponymous lottery to be stoned to death.`;
-
 
 //14.4 Part 2: Coding Instructions stap 5
 
@@ -24,12 +22,21 @@ let questionCounter = 0;
 for(let i = numberOfQuestions; i >= 1; i--){
     console.log(i);
     userInputs.push(prompt(questionArray[questionCounter] + `(${numberOfQuestions} questions left)`));
+   
     questionCounter++;
     numberOfQuestions--;
     console.log(userInputs)
+    
 }
 
 alert('All done! Ready for your totally-accurate, not-at-all confusing history of tech??');
 
+let userStory = `In ${userInputs[0]} by ${userInputs[1]}, tradition and community ties lead to deadly consequences when a ${userInputs[2]} is chosen in the eponymous lottery to be stoned to death.`;
+
+
 //Show the story which entered input from the user 
-//console.log(userStory)
+console.log(userStory);
+
+//Write the story to the DOM
+
+document.write(userStory);
